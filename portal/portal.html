@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UNIM Portal</title>
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    /* Navbar Styles */
+    nav {
+      background-color: #00004d;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      position: relative;
+      margin-right: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-size: 16px;
+      padding: 10px;
+      display: block;
+    }
+
+    nav ul li a:hover {
+      background-color: #a52a2a;
+      border-radius: 5px;
+    }
+
+    /* Dropdown menu */
+    .submenu {
+      position: absolute;
+      top: 40px;
+      left: 0;
+      background-color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      display: none;
+      z-index: 1000;
+    }
+
+    .submenu li {
+      margin: 0;
+    }
+
+    .submenu li a {
+      color: #800000;
+      padding: 10px 20px;
+    }
+
+    .submenu li a:hover {
+      background-color: #f5f5f5;
+    }
+
+    /* Show dropdown on hover */
+    nav ul li:hover .submenu {
+      display: block;
+    }
+.top-bar {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      color: white;
+      font-size: 14px;
+    }
+
+.top-bar .date-time {
+      padding: 13px;
+      font-size: 15px;
+      font-weight: bold;
+    }
+
+
+.hero {
+    position: relative;
+    height: 100vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    color: white;
+    text-align: center;
+  }
+
+  .hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5); 
+    border-radius: 10px;
+  }
+
+  .hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+
+  </style>
+</head>
+<body>
+  <header>
+<div class="top-bar">
+      <p>+607-1233 4566 | corporate@unim.my</p>
+      <div class="date-time" id="dateTime"></div>
+      <div class="social-icons">
+  <a href="https://www.facebook.com/profile.php?id=61572830691006" class="icon" aria-label="Facebook">
+    <i class="fab fa-facebook"></i>
+  </a>
+  <a href="https://www.instagram.com/unim.dihatiku?igsh=MTZ0eHg2eTlqd3YxMQ%3D%3D&utm_source=qr" class="icon" aria-label="Instagram">
+    <i class="fab fa-instagram"></i>
+  </a>
+  <a href="https://t.me/+abmAxIayQ49iMzE1" class="icon" aria-label="Telegram">
+    <i class="fab fa-telegram-plane"></i>
+  </a>
+</div>
+    </div>
+    <nav>
+      <div class="logo" style="display: flex; align-items: center;">
+    <img src="images/UNIM LOGO V2.png" alt="UNIM Logo" style="height: 105px;">
+    <h1 style="color: white; margin-left: 10px; font-size:30px;">University of Information Management</h1>
+  </div>
+      </div>
+      <ul>
+        <li>
+          <a href="about.html">ABOUT</a>
+          <ul class="submenu">
+            <li><a href="about.html#vision">Vision & Mission</a></li>
+            <li><a href="about.html#uniqueness">Uniqueness of UNIM</a></li>
+            <li><a href="about.html#org-chart">Organizational Chart</a></li>
+            <li><a href="about.html#achieve">Achievement</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="academic.html">COURSE AT UNIM</a>
+          
+        <li><a href="exampaper.html">EXAM PAPER</a></li>
+        <li><a href="contact.html">CONTACT</a>
+          <ul class="submenu">
+            <li><a href="mailto:info@unim.my">Email Us</a></li>
+          </ul>
+        </li>
+        <li><a href="studentportal/index1.html">STUDENT INFORMATION</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <section class="hero">
+  <video autoplay loop muted playsinline class="hero-video">
+    <source src="vid/video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Content overlay -->
+  <div class="hero-content">
+    <h2>Your Journey and Life Starts Here</h2>
+    <p>Malaysia’s Premier University in Information Management</p>
+    <p>UNIM is a place where you can study and learn beyond your imagination. It’s a place where students can discover their potentials, express themselves, and innovate new ideas.</p>
+    <p><em>"Information is Information, Data is about Data"</em></p>
+  </div>
+</section>
+
+<section class="why-study">
+  <h2>Why Study at UNIM?</h2>
+  <div class="rankings">
+    <div class="ranking-item left">
+      <p>No 1 in Malaysia</p>
+      <ul>
+        <li>#Information Systems</li>
+        <li>#Data Science & Analytics</li>
+        <li>#Information Management</li>
+        <li>#Information Technology Management</li>
+        <li>#Software Engineering</li>
+        <li>#Artificial Intelligence</li>
+        <li>#Cybersecurity</li>
+      </ul>
+      <p>QS World University Rankings by Subjects 2024</p>
+    </div>
+    <div class="ranking-item center">
+      <h3>#37</h3>
+      <p>in Asia</p>
+      <p>QS World University Rankings</p>
+    </div>
+    <div class="ranking-item right">
+      <p>#1 in the World for SDG4 - Quality Education</p>
+      <p>#1 in Malaysia for SDG9 - Industry, Innovation and Infrastructure</p>
+      <p>THE Impact Rankings 2023</p>
+    </div>
+  </div>
+  <div class="programmes">
+    <div class="programme-card">Bachelor’s Degree Programmes<br><span>Explore the structure of our full-time bachelor's degree programmes in Information Management and related fields.</span></div>
+    <div class="programme-card">Postgraduate Programmes<br><span>We offer various research-focused postgraduate programmes for those passionate about furthering their expertise in Information Management.</span></div>
+    <div class="programme-card">Diploma, Executive & Part-Time Programmes<br><span>Our UTMspace offers a broad range of diploma, part-time degree, and executive programmes in Information Technology and Management.</span></div>
+  </div>
+  <div class="stats">
+    <div class="stat">
+      <h3>22,171</h3>
+      <p>Undergraduates</p>
+    </div>
+    <div class="stat">
+      <h3>7,979</h3>
+      <p>Postgraduates</p>
+    </div>
+    <div class="stat">
+      <h3>1,564</h3>
+      <p>Academician</p>
+    </div>
+    <div class="stat">
+      <h3>1,452</h3>
+      <p>Academicians with PhD</p>
+    </div>
+    <div class="stat">
+      <h3>248,247</h3>
+      <p>Alumni</p>
+    </div>
+  </div>
+</section>
+
+  <div class="campus-locations">
+    <div class="location-card">
+      <img src="" alt="">
+      <p></p>
+    </div>
+    <div class="location-card">
+      <img src="images/about UNIM.jpg" alt="UNIM">
+      <p>UNIM Cyberjaya</p>
+    </div>
+    <div class="location-card">
+      <img src="" alt="">
+      <p></p>
+    </div>
+  </div>
+</section>
+
+<section id="latest-news" class="latest-news">
+  <h2>Latest from UNIM</h2>
+  <div class="news-section">
+    <div class="tabs">
+      <button class="tab active" onclick="showContent('news')">News</button>
+      <button class="tab" onclick="showContent('events')">Events Calendar</button>
+      <button class="tab" onclick="showContent('magazine')">Magazine</button>
+      <button class="tab" onclick="showContent('academic')">Academic Calendar</button>
+    </div>
+    <div class="news-content">
+  <div id="news" class="content active">
+    <ul>
+      <li>
+        <a href="https://uitm.edu.my/index.php/en/latest-news/583-pejabat-komunikasi-strategik" target="_blank">
+          <strong>PEJABAT KOMUNIKASI STRATEGIK UNIM</strong>
+        </a>
+      </li>
+      <li>
+        <a href="https://uitm.edu.my/index.php/en/latest-news/580-sambutan-hari-oku-uitm-2024-komitmen-ke-arah-kelestarian-oku-dan-varsiti-inklusif-dan-mesra-oku" target="_blank">
+          <strong>Sambutan Hari OKU UNIM 2024: Komitmen Ke Arah Kelestarian OKU dan Varsiti Inklusif dan Mesra OKU</strong>
+        </a>
+      </li>
+      <li>
+        <a href="https://uitm.edu.my/index.php/en/latest-news/579-uitm-raikan-semangat-kebersamaan-alumni-sempena-hari-alumni-2024" target="_blank">
+          <strong>UNIM Raikan Semangat Kebersamaan Alumni Sempena Hari Alumni 2024</strong>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+      <div id="events" class="content">
+        <p>Here is the calendar of upcoming events...</p>
+        <!-- You can add your events details here -->
+      </div>
+      <div id="magazine" class="content">
+        <p>Latest edition of our magazine...</p>
+        <!-- Add magazine content here -->
+      </div>
+      <div id="academic" class="content">
+    <h3>Academic Calendar - Important Files</h3>
+    <ul>
+        <li>
+            <a href="file/Group A - Sesi II 2024_2025 [20252].pdf" target="_blank">
+                Group A - Sesi II 2024_2025 [20252].pdf
+            </a>
+        </li>
+        <li>
+            <a href="file/Group A - Summary Schedule Session 2023 - 2024.pdf" target="_blank">
+                Group A - Sesi II 2024_2025 [20252].pdf
+            </a>
+        </li>
+        <li>
+            <a href="file/Group B - Summary Schedule Session 2024_2025.pdf" target="_blank">
+                Group B - Summary Schedule Session 2024_2025.pdf
+            </a>
+        </li>
+        <li>
+            <a href="file/Group_B_Sesi_II_2024_2025_20252_amended_13_Mac_2024_1.pdf" target="_blank">
+                Group B - Sesi II 2024_2025 [20252] Amended 13 Mac 2024.pdf
+            </a>
+        </li>
+    </ul>
+</div>
+    </div>
+    <div class="social-media">
+  <p>Follow us on:</p>
+  <ul>
+    <li><a href="https://www.facebook.com/profile.php?id=61572830691006"><img src="images/fb.png" alt="Facebook" width="43"></a></li>
+    <li><a href="https://www.instagram.com/unim.dihatiku?igsh=MTZ0eHg2eTlqd3YxMQ%3D%3D&utm_source=qr"><img src="images/insta.png" alt="Instagram" width="43"></a></li>
+    <li><a href="https://t.me/+abmAxIayQ49iMzE1"><img src="images/tele.png" alt="Telegram" width="43"></a></li>
+  </ul>
+</div>
+
+<section class="students-experience">
+  <h2>Students Experience</h2>
+  <p>University life is more than just studying. It is a great opportunity to get involved in student activities and societies.</p>
+  <div class="experience-gallery">
+    <img src="images/archive.jpg" alt=Arkib Negara Malaysia">
+    <img src="images/outreach.jpg" alt="Outreach Program">
+    <img src="images/intern.jpg" alt="Intern after Sem 4">
+  </div>
+  <div class="experience-details">
+    <div class="card">
+      <h3>Arkib Negara Malaysia</h3>
+      <p>When we in area of Information Management, we will go to the Arkib Negara Malaysia for once.</p>
+      <a href="https://youtu.be/GZXwNHdOdUk?si=iB8rNjvVcIIQEBrf">Learn More</a>
+    </div>
+    <div class="card">
+      <h3>Coding References</h3>
+      <p>Some of students will be use the websites for references for assingments such as for coding in php, html and css and color.</p>
+      <a href="https://www.w3schools.com/">Learn More</a>
+    </div>
+    <div class="card">
+      <h3>Internships</h3>
+      <p>During semester 4 break, the students will go to the interships for 8 weeks or 2 months.</p>
+      <a href="studentportal/file/GUIDELINE IMD310.pdf">Learn More</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+      <div class="footer-container">
+        <div class="footer-column">
+          <h3>University of Information Management</h3>
+          <p><strong>Address:</strong> Persiaran Bestari, Cyber 11, 63000 UNIM Cyberjaya, Selangor, Malaysia.</p>
+          <p><strong>Phone:</strong> +607-1233 4566</p>
+          <p><strong>Email:</strong> corporate@unim.my</p>
+          <p><strong>Office Hours:</strong> Mon – Thurs (8:00 am – 5:00 pm) <br> Friday (8:00 am – 3:30 pm)</p>
+          <p><strong>Website:</strong> <a href="portal.html" target="_blank">unim.my</a></p>
+        </div>
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <p>
+            <a href="https://maps.app.goo.gl/519Z2nWrpQLqerJE7?g_st=com.google.maps.preview.copy" class="sitemap-link">University of Information Management</a>
+          </p>
+          <p>
+            <a href="studentportal/index1.html" class="studentportal-link">Student Portal</a>
+          </p>
+          <a href="contact.html" class="contact">Contact</a>
+          </p>
+          <a href="https://maps.app.goo.gl/519Z2nWrpQLqerJE7?g_st=com.google.maps.preview.copy" class="sitemap-link">Sitemap</a>
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Copyright © 2025 Universiti of Information Management (UNIM). All Rights Reserved.</p>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/profile.php?id=61572830691006"><img src="images/fb.png" alt="Facebook"></a>
+          <a href=""><img src="images/tele.png" alt="Telegram"></a>
+          <a href="https://www.instagram.com/unim.dihatiku?igsh=MTZ0eHg2eTlqd3YxMQ%3D%3D&utm_source=qr"><img src="images/insta.png" alt="Instagram"></a>
+        </div>
+      </div>
+    </footer>
+
+<script>
+  function showContent(contentId) {
+    // Hide all content divs
+    const contents = document.querySelectorAll('.content');
+    contents.forEach(content => content.classList.remove('active'));
+
+    // Remove active class from all tabs
+    const tabs = document.querySelectorAll('.tab');
+    tabs.forEach(tab => tab.classList.remove('active'));
+
+    // Show the clicked content and activate the corresponding tab
+    document.getElementById(contentId).classList.add('active');
+    document.querySelector(`button[onclick="showContent('${contentId}')"]`).classList.add('active');
+  }
+ 
+function updateDateTime() {
+      const dateTimeElement = document.getElementById('dateTime');
+      const now = new Date();
+      const date = now.toLocaleDateString('en-US', {
+        weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
+      });
+      const time = now.toLocaleTimeString('en-US', {
+        hour: '2-digit', minute: '2-digit', second: '2-digit'
+      });
+      dateTimeElement.textContent = `${date} | ${time}`;
+    }
+
+    // Update the date and time every second
+    setInterval(updateDateTime, 1000);
+    updateDateTime(); // Initial call to display time immediately
+
+
+</script>
+
+</body>
+</html>

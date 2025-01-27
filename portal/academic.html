@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study at UNIM</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: url('https://www.utm.my/wp-content/uploads/2021/05/utm-campus.jpg') no-repeat center center/cover;
+            color: #333;
+        }
+
+        /* Header Styling */
+        header {
+            background-color: #00264d;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.5rem 2rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Container to hold the logo and h1 together */
+        header .header-content {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            justify-content: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.8rem;
+        }
+
+        header .logo {
+            height: 60px;
+            width: auto;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+
+        /* Marquee Styling */
+        .marquee {
+            background-color: #800020;
+            color: yellow;
+            font-size: 1rem;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        /* Background Section */
+        .background-section {
+            background: url('images/student.jpg') no-repeat center center/cover;
+            background-size: cover;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .background-section .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0);
+            z-index: 1;
+        }
+
+        .background-section .text-box {
+            position: relative;
+            z-index: 2;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px 30px;
+            border-radius: 10px;
+            text-align: center;
+            max-width: 600px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .background-section h2 {
+            color: #0056a3;
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .background-section p {
+            font-size: 1rem;
+            color: #333;
+        }
+
+        /* Container Section */
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        /* Course Box Styling */
+        .course-box {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            background-color: #e6ffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .course-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .course-box h3 {
+            margin: 0;
+            color: #0056a3;
+            font-size: 1.5rem;
+        }
+
+        .course-box p {
+            margin: 10px 0;
+            color: #666;
+        }
+
+        .course-box a {
+            color: white;
+            background-color: #0056a3;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            font-size: 0.9rem;
+        }
+
+        .course-box a:hover {
+            background-color: #00264d;
+        }
+
+        /* Footer Styling */
+        footer {
+            text-align: center;
+            padding: 10px 20px;
+            background: #800020;
+            color: white;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            header h1 {
+                margin: 10px 0;
+            }
+
+            .background-section {
+                height: 300px;
+            }
+
+            .background-section h2 {
+                font-size: 1.5rem;
+            }
+
+            .container {
+                padding: 15px;
+            }
+
+            .course-box {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="/">
+                <img src="images/UNIM LOGO V2.png" alt="UTM Logo" class="logo">
+            </a>
+            <h1>UNIM COURSE DIPLOMA & DEGREE</h1>
+        </div>
+    </header>
+
+    <!-- Marquee Section Under Header -->
+    <div class="marquee">
+        <marquee>University of Information Management</marquee>
+    </div>
+
+    <div class="background-section">
+        <div class="overlay"></div>
+        <div class="text-box">
+            <h2>Welcome to University of Information Management</h2>
+            <p>Explore your academic journey and unlock your potential with our world-class programs.</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Available Courses</h2>
+
+        <h3>Diploma Programs</h3>
+        <div class="course-box">
+            <h3>CDIM110 - Diploma in Information Management</h3>
+            <p>Learn the fundamentals of managing information systems, databases, and libraries in a modern context.</p>
+            <p>Available at: UNIM Campus Segamat</p>
+            <a href="#" target="_blank">Apply</a>
+        </div>
+        <div class="course-box">
+            <h3>CDIM144 - Diploma In Library Informatics</h3>
+            <p>Focuses on equipping students with skills in library technology and information sciences.</p>
+            <p>Available at: UNIM Campus Kuala Lumpur</p>
+            <a href="#" target="_blank">Apply</a>
+        </div>
+
+        <h3>Degree Programs</h3>
+        <div class="course-box">
+            <h3>CDIM260 - Bachelor of Information Science (Hons) Library Management</h3>
+            <p>Prepares students for careers in library administration, collection development, and user services.</p>
+            <p>Available at: UNIM Campus Segamat</p>
+            <a href="#" target="_blank">Apply</a>
+        </div>
+        <div class="course-box">
+            <h3>CDIM261 - Bachelor of Information Science (Hons) Records Management</h3>
+            <p>Specializes in the management of records and information assets for organizations.</p>
+            <p>Available at: UNIM Campus Segamat & Campus Kuala Lumpur</p>
+            <a href="#" target="_blank">Apply</a>
+        </div>
+        <div class="course-box">
+            <h3>CDIM262 - Bachelor of Information Science (Hons) Information Systems Management</h3>
+            <p>Focuses on the design, implementation, and management of information systems in organizations.</p>
+            <p>Available at: UNIM Campus Segamat & Campus Kuala Lumpur</p>
+            <a href="#" target="_blank">Apply</a>
+        </div>
+        <div class="course-box">
+            <h3>CDIM263 - Bachelor of Information Science (Hons) Information Content Management</h3>
+            <p>Develops skills in managing and organizing digital and non-digital content effectively.</p>
+            <p>Available at: UNIM Campus Kuala Lumpur</p>
+            <a href="#" target="_blank">Apply</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Universiti of Information Management(UNIM). All rights reserved.</p> 
+    </footer>
+</body>
+</html>
