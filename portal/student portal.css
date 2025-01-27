@@ -1,0 +1,66 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.sitemap-container {
+    max-width: 900px;
+    width: 100%;
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #4B0082;
+}
+
+/* Sitemap List */
+.sitemap {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sitemap > li {
+    margin-bottom: 20px;
+}
+
+.sitemap h2 {
+    font-size: 20px;
+    color: #4B0082;
+    margin-bottom: 10px;
+}
+
+.sitemap ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 20px;
+}
+
+.sitemap ul li {
+    margin-bottom: 8px;
+}
+
+.sitemap ul li a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.sitemap ul li a:hover {
+    color: #4B0082;
+}
