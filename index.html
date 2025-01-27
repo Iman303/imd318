@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UNIM PORTAL</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="main">
+    <input type="checkbox" id="chk" aria-hidden="true">
+
+    <!-- Sign Up Form -->
+    <div class="signup">
+      <form id="signupForm">
+        <label for="chk" aria-hidden="true">Sign Up</label>
+        <input type="text" id="signupUsername" placeholder="User name" required>
+        <input type="email" id="signupEmail" placeholder="Email" required>
+        <input type="password" id="signupPassword" placeholder="Password" required>
+        <button type="submit">Sign up</button>
+        <p id="signupMessage"></p>
+      </form>
+    </div>
+
+    <!-- Login Form -->
+    <div class="login">
+      <form id="loginForm">
+        <label for="chk" aria-hidden="true">Login</label>
+        <input type="email" id="loginEmail" placeholder="Email" required>
+        <input type="password" id="loginPassword" placeholder="Password" required>
+        <button type="submit">Login</button>
+        <p id="loginMessage"></p>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
