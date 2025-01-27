@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    
+    <title>Student Portal</title> 
+</head>
+<style>
+        /* Style for the small audio player */
+        .music-player {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 5px;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 200px;
+            height: 50px;
+        }
+
+        .music-player button {
+            background-color: transparent;
+            border: none;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .music-player button:hover {
+            color: #ccc;
+        }
+
+        .music-player audio {
+            width: 100%;
+        }
+
+    </style>
+<body>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="images/logo.png" alt="">
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name">Student Portal</span>
+                    <span class="profession">UNIM students</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+
+                <li class="search-box">
+                    <i class='bx bx-search icon'></i>
+                    <input type="text" placeholder="Search...">
+                </li>
+
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="index1.html">
+                            <i class='bx bx-home-alt icon' ></i>
+                            <span class="text nav-text">Menu</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="file/courseoutline.pdf">
+                            <i class='bx bx-bar-chart-alt-2 icon' ></i>
+                            <span class="text nav-text">Course outline</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="notes.html">
+                            <i class='bx bx-bell icon'></i>
+                            <span class="text nav-text">Notes</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="lect.html">
+                            <i class='bx bx-pie-chart-alt icon' ></i>
+                            <span class="text nav-text">Lecturers</span>
+                        </a>
+                    </li>
+
+
+                    <li class="nav-link">
+                        <a href="class.html">
+                            <i class='bx bx-wallet icon' ></i>
+                            <span class="text nav-text">Classmates</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+                <li class="nav-link">
+                    <a href="../portal.html">
+                        <i class='bx bx-log-out icon' ></i>
+                        <span class="text nav-text">Go Back</span>
+                    </a>
+                </li>
+
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text">Dark mode</span>
+
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+                
+            </div>
+        </div>
+
+    </nav>
+
+    <section class="home">
+    <div class="content-container">
+
+        <!-- Marquee Section -->
+        <marquee behavior="scroll" direction="left" class="marquee-text">
+            Important: Please check the upcoming examination schedules and class updates.
+        </marquee>
+
+        <!-- Student Profile Section -->
+        <div class="profile-section">
+            <div class="profile-header">Student Profile</div>
+            <div class="profile-details">
+                <p><strong>Student ID:</strong> 2022845966</p>
+                <p><strong>Name:</strong> YASMIN NADHIRAH BINTI IBRAHIM</p>
+                <p><strong>Date of Birth (DOB):</strong> 08/05/2004</p>
+                <p><strong>Programme:</strong> CDIM110</p>
+                <p><strong>Mobile No:</strong> 01110698604</p>
+                <p><strong>Current Email:</strong> 2022497468@student.uitm.edu.my</p>
+                <p><strong>MUET Status:</strong> -</p>
+                <p><strong>Advisor:</strong> AZURA BT ABDUL JAMIL @ KAMARUDZZ</p>
+            </div>
+        </div>
+
+        <!-- Card Links Section -->
+        <div class="cards-section">
+            <!-- e-Scheduling Exam Card -->
+            <a href="https://simsweb.uitm.edu.my/SPORTAL_APP/exam_schedule/index.htm" class="card-link">
+                <div class="card">
+                    <div class="card-icon">
+                        <img src="images/bookicon.png" alt="e-Academic System">
+                    </div>
+                    <div class="card-title">e-Scheduling Exam</div>
+                    <p>Examination Course, Examination place, Examination Date.</p>
+                </div>
+            </a>
+
+<div class="music-player">
+        <audio id="background-music" src="sound/song.mp3" preload="auto" autoplay></audio>
+        <button onclick="playMusic()">Play</button>
+        <button onclick="stopMusic()">Stop</button>
+        <button onclick="increaseVolume()">Volume +</button>
+        <button onclick="decreaseVolume()">Volume -</button>
+    </div>
+
+            <!-- Student Card -->
+            <a href="studentcard.html" class="card-link">
+                <div class="card">
+                    <div class="card-icon">
+                        <img src="images/an.png" alt="Announcement">
+                    </div>
+                    <div class="card-title">Student Card</div>
+                    <p>Your identity, your card will be and more...</p>
+                </div>
+            </a>
+
+            <!-- Permata Library Card -->
+            <a href="https://ptarapps.uitm.edu.my/loginv2/" class="card-link">
+                <div class="card">
+                    <div class="card-icon">
+                        <img src="images/dl.png" alt="Permata Library">
+                    </div>
+                    <div class="card-title">Permata Library</div>
+                    <p>eBook, Online Databases, Free Open Access and more...</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

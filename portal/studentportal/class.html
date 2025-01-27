@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecturers</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        .home {
+            margin-left: 100px; 
+            padding: 30px;
+            transition: margin-left 0.3s ease;
+        }
+
+        .sidebar.close ~ .home {
+            margin-left: 15px;
+        }
+
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+.classmates-list {
+    list-style: none;
+    padding-left: 0;
+    font-family: Arial, sans-serif;
+    margin-top: 20px;
+    position: relative;
+    z-index: 1; 
+}
+
+.classmates-list li {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+    font-size: 18px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.classmates-list li:hover {
+    background-color: #e2e2e2;
+    transform: translateX(5px);
+    cursor: pointer;
+}
+
+.classmates-list li:nth-child(odd) {
+    background-color: #f0f0f0;
+}
+
+.classmates-list li:nth-child(even) {
+    background-color: #ffffff;
+}
+
+.classmates-list li span {
+    font-weight: bold;
+}
+
+
+.main-content {
+    margin-left: 100px; 
+    padding: 10px;
+}
+
+</style>
+<body>
+
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="images/logo.png" alt="">
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name">Student Portal</span>
+                    <span class="profession">UNIM students</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+                <li class="search-box">
+                    <i class='bx bx-search icon'></i>
+                    <input type="text" placeholder="Search...">
+                </li>
+
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="index.html">
+                            <i class='bx bx-home-alt icon' ></i>
+                            <span class="text nav-text">Menu</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="file/courseoutline.pdf">
+                            <i class='bx bx-bar-chart-alt-2 icon' ></i>
+                            <span class="text nav-text">Course outline</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="notes.html">
+                            <i class='bx bx-bell icon'></i>
+                            <span class="text nav-text">Notes</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="lect.html">
+                            <i class='bx bx-pie-chart-alt icon' ></i>
+                            <span class="text nav-text">Lecturers</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="class.html">
+                            <i class='bx bx-wallet icon' ></i>
+                            <span class="text nav-text">Classmates</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+                <li class="nav-link">
+                    <a href="../portal.html">
+                        <i class='bx bx-log-out icon' ></i>
+                        <span class="text nav-text">Go Back</span>
+                    </a>
+                </li>
+
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text">Dark mode</span>
+
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </div>
+        </div>
+    </nav>
+
+<!-- Main Content -->
+    <div class="main-content">
+        <h1>Classmates List</h1>
+        <ul class="classmates-list">
+            <li>AIRIN SHAUQINA BINTI ARIFFIN</li>
+            <li>AMAR ZAFRI BIN ZAINUDIN</li>
+            <li>AMISHA HAZREEN BINTI AMIRHYDE</li>
+            <li>ANIS SYUHADA BINTI AZLAN</li>
+            <li>AUNI ATHIRAH BINTI ROBI</li>
+            <li>AZIMUDDIN BIN MOHD HUSAINI</li>
+            <li>CHE AZHARIZAL BIN CHE RANI</li>
+            <li>FARAH BATRISYIA BINTI AZUHAIRI</li>
+            <li>IKMAL FATHILLAH BIN ABU ARQAM</li>
+            <li>MUHAMAD NAKIB BIN HAMIDUN</li>
+            <li>MUHAMMAD AMIRUL HASSAN BASRI BIN MOHD RAFI</li>
+            <li>MUHAMMAD DANIAL AKASYAH BIN MOHD ALI</li>
+            <li>MUHAMMAD DANISH BIN MD SAKIMAN</li>
+            <li>NIK MUHAMMAD AFIQ IMAN BIN AMRAN</li>
+            <li>NUR AINA SAFIAH BINTI NORJAFNI</li>
+            <li>NUR EDRIEYANI NABILA BINTI EDDY</li>
+            <li>NUR FATHIN SABRINA BINTI ABDULLAH KUTTY</li>
+            <li>NUR IMANINA BINTI MOHD SAPIRON</li>
+            <li>NUR NABILA BINTI OMAR</li>
+            <li>NUR SAFI SAJIDAH BINTI AMRAN</li>
+            <li>NURIN KARMILA BINTI ABDULLAH</li>
+            <li>NURUL AIN BINTI MD JAMAL</li>
+            <li>NURUL EZATTY BINTI ZAMRY</li>
+            <li>NURUL HANISAH BINTI ABD GAFFAR</li>
+            <li>SHASHA AMALIA BINTI SHUKOR</li>
+            <li>SITI AISHA BINTI MOHD FAISAL</li>
+            <li>SUHAILA YUSRINA BINTI SULAIMAN</li>
+            <li>UMMU UMAIRAH BINTI HAMIDI</li>
+            <li>UMUL UMAIRAH BINTI JAAFAR</li>
+            <li>WIDAD HUSNA BINTI MOHD RIDWAN</li>
+            <li>YASMIN NADHIRAH BINTI IBRAHIM</li>
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

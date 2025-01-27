@@ -1,0 +1,107 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Student Card</title> 
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<style>
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Ensure the body takes up the full height */
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    display: flex; /* Use flexbox for centering */
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    text-align: center;
+    max-width: 500px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #4B0082;
+}
+/* Button Styles */
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background: #4B0082;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.btn:hover {
+    background: #3a006a;
+}
+/* Card Styles */
+.card {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: #f7f7f7;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: opacity 0.3s, transform 0.3s;
+}
+.card.hidden {
+    opacity: 0;
+    transform: scale(0.9);
+    pointer-events: none;
+}
+.card-image {
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto 20px;
+    display: block;
+    border-radius: 10px;
+    border: 2px solid #4B0082;
+}
+.card-details h2 {
+    font-size: 20px;
+    color: #4B0082;
+    margin-bottom: 10px;
+}
+.card-details p {
+    font-size: 14px;
+    color: #555;
+    margin: 5px 0;
+}
+</style> 
+<body> 
+    <div class="container"> 
+        <h1>Student Card</h1> 
+        <button id="showCardBtn" class="btn">Show Student Card</button> 
+        <div id="studentCard" class="card hidden"> 
+            <img src="images/studentportal.jpg" alt="Student Card" class="card-image"> 
+            <div class="card-details"> 
+                <h2>YASMIN NADHIRAH BINTI IBRAHIM</h2> 
+                <p>Student ID: 123456</p> 
+                <p>Programme: CDIM110</p> 
+                <p>Date of Birth: 08/05/2004</p> 
+                <p>Advisor: AZURA BT ABDUL JAMIL @ KAMARUDZZ</p> 
+            </div> 
+        </div> 
+    </div> 
+ 
+    <script> 
+        const showCardBtn = document.getElementById("showCardBtn"); 
+        const studentCard = document.getElementById("studentCard"); 
+ 
+        showCardBtn.addEventListener("click", () => { 
+            studentCard.classList.toggle("hidden"); 
+        }); 
+    </script> 
+</body> 
+</html>

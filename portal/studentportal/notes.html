@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    
+    <title>Notes - Student Portal</title> 
+</head>
+<style>
+    .content {
+        margin-left: 250px;
+        padding: 20px;
+        width: calc(100% - 250px);
+        overflow-y: auto;
+        transition: margin-left 0.3s ease, width 0.3s ease;
+    }
+
+    .sidebar.close ~ .content {
+        margin-left: 80px;
+        width: calc(100% - 80px);
+    }
+
+    .notes-section {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+    }
+
+    .note {
+        background: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .note:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .note h2 {
+        font-size: 20px;
+        color: #2c3e50;
+        margin-bottom: 10px;
+    }
+
+    .note p {
+        font-size: 16px;
+        color: #7f8c8d;
+        margin-bottom: 15px;
+    }
+
+    .download-link {
+        display: inline-block;
+        padding: 10px 15px;
+        color: #ffffff;
+        background: #3498db;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background 0.2s ease;
+    }
+
+    .download-link:hover {
+        background: #2980b9;
+    }
+</style>
+<body>
+
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="images/logo.png" alt="">
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name">Student Portal</span>
+                    <span class="profession">UNIM students</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+                <li class="search-box">
+                    <i class='bx bx-search icon'></i>
+                    <input type="text" placeholder="Search...">
+                </li>
+
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="index.html">
+                            <i class='bx bx-home-alt icon' ></i>
+                            <span class="text nav-text">Menu</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="file/courseoutline.pdf">
+                            <i class='bx bx-bar-chart-alt-2 icon' ></i>
+                            <span class="text nav-text">Course outline</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="notes.html">
+                            <i class='bx bx-bell icon'></i>
+                            <span class="text nav-text">Notes</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="lect.html">
+                            <i class='bx bx-pie-chart-alt icon' ></i>
+                            <span class="text nav-text">Lecturers</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="class.html">
+                            <i class='bx bx-wallet icon' ></i>
+                            <span class="text nav-text">Classmates</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+                <li class="">
+                    <a href="../portal.html">
+                        <i class='bx bx-log-out icon' ></i>
+                        <span class="text nav-text">Go Back</span>
+                    </a>
+                </li>
+
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text">Dark mode</span>
+
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </div>
+        </div>
+    </nav>
+
+    <main class="content">
+        <header>
+            <h1>Notes</h1>
+        </header>
+        
+        <div>
+            <label for="subject">Choose a subject:</label>
+            <select id="subject" name="subject">
+                <option value="">Select a subject</option>
+                <option value="imd310">IMD310</option>
+                <option value="imd313">IMD313</option>
+                <option value="imd316">IMD316</option>
+                <option value="imd317">IMD317</option>
+                <option value="imd318">IMD318</option>
+            </select>
+        </div>
+
+        <section class="notes-section" id="notes-section">
+            
+        </section>
+    </main>
+
+    <script>
+        const notesData = {
+    imd310: [
+        { title: "IMD310 - Note 1", file: "file/GUIDELINE IMD310.pdf" }
+    ],
+    imd313: [
+        { title: "IMD313 - Note 1", file: "file/IMD313 Topic 1.pdf" },
+        { title: "IMD313 - Note 2", file: "file/IMD313 - Topic 2.pptx" },
+        { title: "IMD313 - Note 3", file: "file/IMD313 - Topic 3.pptx" },
+        { title: "IMD313 - Note 3.2.1", file: "file/IMD313 - Topic 3.2.1.pptx" },
+        { title: "IMD313 - Note 3.2.3", file: "file/IMD313 - Topic 3.2.3 Appraisal_2.pptx" },
+        { title: "IMD313 - Note 3", file: "file/IMD313 - Topic 3.pptx" },
+        { title: "IMD313 - Note 4", file: "file/IMD313 - Topic 4 Reference services.pptx" },
+        { title: "IMD313 - Note 5", file: "file/IMD313 - Topic 5 Physical Control _ Intellectual Control of Archives.pptx" },
+        { title: "IMD313 - Note 5.1", file: "file/IMD313 - Topic 5.1 Accessioning (1).pptx" },
+        { title: "IMD313 - Note 6", file: "file/IMD313 - Topic 6 Arrangement and Description of Archives.pptx" },
+        { title: "IMD313 - Note 7", file: "file/IMD313 - Topic 7 Preservation Program in Archives (V2).pptx" },
+        { title: "IMD313 - Note 8", file: "file/IMD313 - Topic 8 Digital Archives.pptx" }
+    ],
+    imd316: [
+        { title: "IMD316 - Note 1", file: "file/Chapter 1 -Introduction to Multimedia.pptx" },
+        { title: "IMD316 - Note 2", file: "file/Chapter 2 - Digital Publishing and Design.pptx" },
+        { title: "IMD316 - Note 3", file: "file/Chapter 3 - Digital Publishing and Design System.pptx" },
+        { title: "IMD316 - Note 4", file: "file/Chapter 4 - Image and Graphic.pptx" },
+        { title: "IMD316 - Note 5", file: "file/Chapter 5 - Communicating and Visual Design with Colors.pptx" },
+        { title: "IMD316 - Note 6", file: "file/Chapter 6 - Tools for Creating.pptx" },
+        { title: "IMD316 - Note 7", file: "file/Chapter 7 - Animation (1).pptx" },
+        { title: "IMD316 - Note 8", file: "file/Chapter 8 - Designing with Multimedia Elements (1).pptx" }
+    ],
+    imd317: [
+        { title: "IMD317 - Note 1", file: "file/Chapter 1_Introduction to Outreach Programs of Information Agencies.pptx" },
+        { title: "IMD317 - Note 2", file: "file/Chapter 2 -Introduction to Information Agency Promotion.pptx" },
+        { title: "IMD317 - Note 3", file: "file/note3.pdf" },
+        { title: "IMD317 - Note 4", file: "file/note4.pdf" },
+        { title: "IMD317 - Note 5", file: "file/note5.pdf" },
+        { title: "IMD317 - Note 6", file: "file/note6.pdf" },
+        { title: "IMD317 - Note 7", file: "file/note7.pdf" }
+    ]
+};
+
+
+        const subjectSelect = document.getElementById('subject');
+        const notesSection = document.getElementById('notes-section');
+        const toggleIcon = document.querySelector('.toggle');
+        const sidebar = document.querySelector('.sidebar');
+
+        subjectSelect.addEventListener('change', () => {
+            const selectedSubject = subjectSelect.value;
+            notesSection.innerHTML = '';
+
+            if (notesData[selectedSubject]) {
+                notesData[selectedSubject].forEach(note => {
+                    const noteElement = document.createElement('article');
+                    noteElement.classList.add('note');
+
+                    noteElement.innerHTML = `
+                        <h2>${note.title}</h2>
+                        <a href="${note.file}" class="download-link" download>Download</a>
+                    `;
+
+                    notesSection.appendChild(noteElement);
+                });
+            }
+        });
+
+        toggleIcon.addEventListener('click', () => {
+            sidebar.classList.toggle('close');
+        });
+    </script>
+</body>
+</html>
